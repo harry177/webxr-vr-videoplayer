@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-three/drei": "^9.80.4",
     "@react-three/xr": "^5.6.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -15,8 +16,10 @@
     "postprocessing": "^6.33.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-player": "^2.12.0",
     "react-scripts": "5.0.1",
     "react-three-fiber": "^6.0.13",
+    "react-xr": "^1.1.0",
     "three": "^0.155.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"

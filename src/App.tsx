@@ -1,20 +1,16 @@
+import React from "react";
+import { VideoPlayer } from "./components/VideoPlayer";
+import "./App.css";
 import { Canvas } from "react-three-fiber";
-import { Controllers, Hands, VRButton, XR } from "@react-three/xr";
-import { VideoPlayer } from "./components/Videoplayer";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <VRButton />
+    <div className="App">
       <Canvas>
-        <XR>
-          <Controllers />
-          <Hands />
-          <VideoPlayer videoUrl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
-        </XR>
+        <VideoPlayer />
       </Canvas>
-    </>
+    </div>
   );
-}
+};
 
 export default App;
