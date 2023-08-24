@@ -1,18 +1,14 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Canvas } from "react-three-fiber";
-//import { VRButton } from "three/examples/jsm/webxr/VRButton.js";
 import { VideoPlayer } from "./components/VideoPlayer";
 import { VRButton, XR, Controllers, Hands } from "@react-three/xr";
 import "./App.css";
+import * as THREE from "three";
 
-interface CanvasProps extends React.HTMLAttributes<HTMLCanvasElement> {
-  vr?: string;
-}
-
-const App: React.FC<CanvasProps> = (vr) => {
+const App = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  //const [isVR, setIsVR] = useState<boolean>(false);
+  
 
   /*useEffect(() => {
     const renderer = new THREE.WebGLRenderer({
@@ -24,14 +20,6 @@ const App: React.FC<CanvasProps> = (vr) => {
     renderer.xr.enabled = true;
     container.appendChild(renderer.domElement);
 
-    const vrButton = VRButton.createButton(renderer);
-    document.body.appendChild(vrButton);
-
-    const handleVRSession = () => {
-      setIsVR(true);
-    };
-
-    vrButton.addEventListener('click', handleVRSession);
 
   }, []);*/
 
