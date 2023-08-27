@@ -1,6 +1,7 @@
-.embed-html {
-    width: 200px;
-    height: 150px;
-    top: -75px;
-    left: -100px;
+.html-main {
+  display: flex!;
+}
+
+.html-main:xr-overlay {
+  display: flex!;
 }

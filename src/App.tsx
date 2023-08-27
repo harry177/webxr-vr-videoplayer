@@ -2,26 +2,31 @@ import { useEffect, useRef } from "react";
 import { Canvas } from "react-three-fiber";
 import { VideoPlayer } from "./components/VideoPlayer";
 import { VRButton, XR, Controllers, Hands } from "@react-three/xr";
+import { toggleSession } from '@react-three/xr'
 import "./App.css";
-import * as THREE from "three";
 
 const App = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
+
+/*useEffect(() => {
+  const handleClick = async () => {
+    const session = await toggleSession('immersive-vr', {sessionInit: {requiredFeatures: ["local"], optionalFeatures: ["layers"]}})
+    if (session) {
+      button.innerText = 'Exit VR'
+    } else {
+      button.innerText = 'Enter VR'
+    }
+  }
   
-
-  /*useEffect(() => {
-    const renderer = new THREE.WebGLRenderer({
-      antialias: true,
-      alpha: true,
-    });
-    const container = containerRef.current!;
-    renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.xr.enabled = true;
-    container.appendChild(renderer.domElement);
-
-
-  }, []);*/
+  const button = document.createElement('button')
+  button.innerText = 'Enter VR'
+  button.style.width = '100px';
+  button.style.height = '50px';
+  button.addEventListener('click', handleClick)
+  containerRef.current && containerRef.current.appendChild(button);
+}, [])*/
+  
 
   return (
     <div className="App" ref={containerRef}>
@@ -30,7 +35,7 @@ const App = () => {
         <XR>
           <Controllers />
           <Hands />
-          <VideoPlayer />
+          <VideoPlayer/>
         </XR>
       </Canvas>
     </div>
