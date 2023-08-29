@@ -52,7 +52,6 @@ export const VideoPlayer: React.FC = () => {
   const height = 5.0;
   const depth = 1.5;
 
-  //const { current: videoTexture } = videoTextureRef;
 
   const geometry = new THREE.BoxGeometry(width, height, depth);
 
