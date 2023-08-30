@@ -78,7 +78,7 @@ export const VideoPlayer: React.FC = () => {
 
   const player = useXR((state) => state.player);
   const controllers = useXR((state) => state.controllers);
-  //const session = useXR((state) => state.session);
+  const session = useXR((state) => state.session);
 
   player.position.set(0, 0, 6);
   controllers.forEach((controller) => {
@@ -184,7 +184,7 @@ export const VideoPlayer: React.FC = () => {
 
   return (
     <>
-      <Environment preset="warehouse" />
+    {session && <><Environment preset="warehouse" />
       <PresentationControls>
         <primitive object={boxMesh} />
         <Interactive onSelectStart={() => setVideoPlaying(!videoPlaying)}>
@@ -197,6 +197,8 @@ export const VideoPlayer: React.FC = () => {
         <primitive object={sphereTwo} />
         </Interactive>
       </PresentationControls>
+      </>}
+      
     </>
   );
 };
