@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { Canvas } from "react-three-fiber";
-import { VideoPlayer } from "./components/VideoPlayer";
+import { VideoPlayer } from "./components/Videoplayer";
 import { VRButton, XR, Controllers, Hands } from "@react-three/xr";
 import "./App.css";
 
